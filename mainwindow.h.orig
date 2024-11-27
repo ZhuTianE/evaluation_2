@@ -1,0 +1,55 @@
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
+
+#include <QMainWindow>
+#include <QLabel>
+#include <QProgressBar>
+#include <QFontComboBox>
+#include <QSpinBox>
+<<<<<<< HEAD
+#include <QTreeWidget>
+#include <QStackedWidget>
+=======
+#include <QTreeWidgetItem>
+#include <QStackedWidget>
+
+>>>>>>> c81122709fc69b88b298c3f8bf3d7d51c8fda38c
+
+QT_BEGIN_NAMESPACE
+namespace Ui {
+class MainWindow;
+
+}
+QT_END_NAMESPACE
+
+class MainWindow : public QMainWindow
+{
+    Q_OBJECT
+
+public:
+    MainWindow(QWidget *parent = nullptr);
+    ~MainWindow();
+
+private slots:
+    void on_pushButton_3_clicked();
+    void onTreeWidgetItemClicked(QTreeWidgetItem *item, int column);
+
+    void on_treeWidget_itemClicked(QTreeWidgetItem *item, int column);
+
+
+    void on_zhuan_pushButton_clicked();
+
+    void on_cen_pushButton_clicked();
+
+private:
+    Ui::MainWindow *ui;
+    QLabel *fLabCurFile;
+    QProgressBar *progressBar1;
+    QFontComboBox *comboFont;
+    QSpinBox   *spinFontSize;
+    QTreeWidget *treeWidget;
+    QStackedWidget *stackedWidget_3;
+    void iniUI();
+
+};
+#endif // MAINWINDOW_H
